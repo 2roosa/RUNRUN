@@ -213,16 +213,16 @@ function animate() {
             gameOver = true;
             jump = false;
             defeatSound.play(); // 게임 오버 소리 재생
-        }; // bunny가 canvas 상단을 넘지 않도록 조정
+        } // bunny가 canvas 상단을 넘지 않도록 조정
     } else {
-        if (bunny.y < BUNNY_Y) {
+        if (bunny.y < 400) {
             bunny.y += 3; // 스페이스바를 떼면 bunny의 y값 증가
             if (bunny.y > 400) {
                 timer = 0;
                 gameOver = true;
                 jump = false;
                 defeatSound.play(); // 게임 오버 소리 재생
-            }; // bunny가 canvas 하단을 넘지 않도록 조정
+            } // bunny가 canvas 하단을 넘지 않도록 조정
         }
     }
     /** end of 토끼 */
@@ -337,4 +337,5 @@ canvas.addEventListener("mousemove", function (e) {
 });
 
 /** end of 4.꾸미기 */
+
 
