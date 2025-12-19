@@ -208,7 +208,7 @@ function animate() {
     // 1-3 토끼 점프 조건 설정하기
     if (jump) {
         bunny.y -= 3; // 스페이스바를 누르고 있으면 bunny의 y값 감소
-        if (bunny.y < 10) bunny.y = 400; // bunny가 canvas 상단을 넘지 않도록 조정
+        if (bunny.y < 10) bunny.y = 10; // bunny가 canvas 상단을 넘지 않도록 조정
     } else {
         if (bunny.y < 400) {
             bunny.y += 3; // 스페이스바를 떼면 bunny의 y값 증가
@@ -327,6 +327,7 @@ canvas.addEventListener("mousemove", function (e) {
 });
 
 /** end of 4.꾸미기 */
+
 
 
 
