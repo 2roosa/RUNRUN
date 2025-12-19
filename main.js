@@ -212,7 +212,7 @@ function animate() {
     } else {
         if (bunny.y < BUNNY_Y) {
             bunny.y += 3; // 스페이스바를 떼면 bunny의 y값 증가
-            if (bunny.y > BUNNY_Y) bunny.y = BUNNY_Y; // bunny가 초기 위치 아래로 내려가지 않도록 조정
+            if (bunny.y > 400) bunny.y = 400; // bunny가 초기 위치 아래로 내려가지 않도록 조정
         }
     }
     /** end of 토끼 */
@@ -327,3 +327,4 @@ canvas.addEventListener("mousemove", function (e) {
 });
 
 /** /** end of 4.꾸미기
+
