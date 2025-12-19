@@ -326,5 +326,4 @@ canvas.addEventListener("mousemove", function (e) {
     }
 });
 
-/** /** end of 4.꾸미기
-
+/** end of 4.꾸미기 */
