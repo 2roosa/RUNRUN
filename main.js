@@ -209,7 +209,7 @@ function animate() {
     if (jump) {
         bunny.y -= 3; // 스페이스바를 누르고 있으면 bunny의 y값 감소
         if (bunny.y <= 20) {
-            ctx.drawImage(bunnyCrashImage, this.x, this.y, this.width, this.height);
+            ctx.drawImage(bunnyCrashImage);
             timer = 0;
             gameOver = true;
             jump = false;
@@ -219,7 +219,7 @@ function animate() {
         if (bunny.y < 400) {
             bunny.y += 3; // 스페이스바를 떼면 bunny의 y값 증가
             if (bunny.y >= 400) {
-                ctx.drawImage(bunnyCrashImage, this.x, this.y, this.width, this.height);
+                ctx.drawImage(bunnyCrashImage);
                 timer = 0;
                 gameOver = true;
                 jump = false;
@@ -339,6 +339,7 @@ canvas.addEventListener("mousemove", function (e) {
 });
 
 /** end of 4.꾸미기 */
+
 
 
 
