@@ -212,6 +212,7 @@ function animate() {
             timer = 0;
             gameOver = true;
             jump = false;
+            ctx.drawImage(bunnyCrashImage, this.x, this.y, this.width, this.height);
             defeatSound.play(); // 게임 오버 소리 재생
         } // bunny가 canvas 상단을 넘지 않도록 조정
     } else {
@@ -221,6 +222,7 @@ function animate() {
                 timer = 0;
                 gameOver = true;
                 jump = false;
+                ctx.drawImage(bunnyCrashImage, this.x, this.y, this.width, this.height);
                 defeatSound.play(); // 게임 오버 소리 재생
             } // bunny가 canvas 하단을 넘지 않도록 조정
         }
@@ -337,6 +339,7 @@ canvas.addEventListener("mousemove", function (e) {
 });
 
 /** end of 4.꾸미기 */
+
 
 
 
