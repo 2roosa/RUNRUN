@@ -15,7 +15,7 @@ let timer = 0; // 장애물 생성 시간
 let obstacleArray = []; // 장애물 배열
 let gameOver = false; // 게임 종료 여부
 let jump = false; // 점프 여부
-let jumpSpeed = 3; // 점프 속도
+let jumpSpeed = 5; // 점프 속도
 
 /** 오디오 객체 생성 및 설정 */
 const jumpSound = new Audio(); // 점프 소리
@@ -208,11 +208,21 @@ function animate() {
     // 1-3 토끼 점프 조건 설정하기
     if (jump) {
         bunny.y -= 3; // 스페이스바를 누르고 있으면 bunny의 y값 감소
-        if (bunny.y < 20) bunny.y = 20; // bunny가 canvas 상단을 넘지 않도록 조정
+        if (bunny.y < 20) {
+            timer = 0;
+            gameOver = true;
+            jump = false;
+            defeatSound.play(); // 게임 오버 소리 재생
+        }; // bunny가 canvas 상단을 넘지 않도록 조정
     } else {
         if (bunny.y < BUNNY_Y) {
             bunny.y += 3; // 스페이스바를 떼면 bunny의 y값 증가
-            if (bunny.y > 400) bunny.y = 400; // bunny가 초기 위치 아래로 내려가지 않도록 조정
+            if (bunny.y > 400) {
+                timer = 0;
+                gameOver = true;
+                jump = false;
+                defeatSound.play(); // 게임 오버 소리 재생
+            }; // bunny가 canvas 하단을 넘지 않도록 조정
         }
     }
     /** end of 토끼 */
@@ -327,3 +337,4 @@ canvas.addEventListener("mousemove", function (e) {
 });
 
 /** end of 4.꾸미기 */
+
