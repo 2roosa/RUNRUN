@@ -83,7 +83,7 @@ const bunny = {
 const OBSTACLE_WIDTH = 50; // 장애물 너비
 const OBSTACLE_HEIGHT = 50; // 장애물 높이
 const OBSTACLE_FREQUENCY = 50; // 장애물 생성 빈도
-const OBSTACLE_SPEED = 15; // 장애물 이동 속도
+const OBSTACLE_SPEED = 13; // 장애물 이동 속도
 
 /** 장애물 클래스 정의 */
 class Obstacle {
@@ -208,7 +208,7 @@ function animate() {
     // 1-3 토끼 점프 조건 설정하기
     if (jump) {
         bunny.y -= 3; // 스페이스바를 누르고 있으면 bunny의 y값 감소
-        if (bunny.y < 20) {
+        if (bunny.y <= 20) {
             timer = 0;
             gameOver = true;
             jump = false;
@@ -217,7 +217,7 @@ function animate() {
     } else {
         if (bunny.y < 400) {
             bunny.y += 3; // 스페이스바를 떼면 bunny의 y값 증가
-            if (bunny.y > 400) {
+            if (bunny.y >= 400) {
                 timer = 0;
                 gameOver = true;
                 jump = false;
@@ -337,6 +337,7 @@ canvas.addEventListener("mousemove", function (e) {
 });
 
 /** end of 4.꾸미기 */
+
 
 
 
