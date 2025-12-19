@@ -224,7 +224,6 @@ function animate() {
                 defeatSound.play(); // 게임 오버 소리 재생
             } // bunny가 canvas 하단을 넘지 않도록 조정
         }
-    }
     /** end of 토끼 */
 }
 /** end of 게임 애니메이션 */
@@ -337,5 +336,6 @@ canvas.addEventListener("mousemove", function (e) {
 });
 
 /** end of 4.꾸미기 */
+
 
 
