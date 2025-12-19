@@ -55,7 +55,7 @@ obstacleImage.src = "./images/obstacle.png";
 const BUNNY_WIDTH = 100; // 토끼 가로 너비
 const BUNNY_HEIGHT = 100; // 토끼 세로 높이
 const BUNNY_X = 10; // 토끼의 초기 X 좌표
-const BUNNY_Y = 400; // 토끼의 초기 Y 좌표
+const BUNNY_Y = 200; // 토끼의 초기 Y 좌표
 
 /** 토끼 객체 정의 */
 const bunny = {
@@ -287,7 +287,7 @@ function restartGame() {
     scoreText.innerHTML = "현재점수: " + score;
     // 게임 오버 시 토끼 위치 초기화
     bunny.x = 10;
-    bunny.y = 400;
+    bunny.y = 200;
     animate();
 }
 /** end of 3-3 마우스 클릭 이벤트 처리 (게임 시작 및 재시작) */
@@ -325,4 +325,5 @@ canvas.addEventListener("mousemove", function (e) {
         canvas.style.cursor = "default";
     }
 });
-/** end of 4.꾸미기 */
+
+/** /** end of 4.꾸미기
