@@ -83,7 +83,7 @@ const bunny = {
 const OBSTACLE_WIDTH = 80; // 장애물 너비
 const OBSTACLE_HEIGHT = 80; // 장애물 높이
 const OBSTACLE_FREQUENCY = 50; // 장애물 생성 빈도
-const OBSTACLE_SPEED = 15; // 장애물 이동 속도
+const OBSTACLE_SPEED = 17; // 장애물 이동 속도
 
 /** 장애물 클래스 정의 */
 class Obstacle {
@@ -325,4 +325,5 @@ canvas.addEventListener("mousemove", function (e) {
         canvas.style.cursor = "default";
     }
 });
+
 /** end of 4.꾸미기 */
